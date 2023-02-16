@@ -9,11 +9,15 @@ import {
   Stack,
   Box,
   Divider,
+  Card,
+  CardContent,
+  CardActions
 } from "@mui/material";
 import React from "react";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+// import { MuiCard } from './components/MuiCard';
 
 export default function Login() {
   const paperStyle = {
@@ -25,9 +29,11 @@ export default function Login() {
   const avatarStyle = { backgroundColor: "#1bbd7e" };
   const buttonStyle = { backgroundColor: "#1bbd7e", margin: "8px 0" };
   return (
-    <>
+    <Paper sx={{ padding: '100px'}} elevation={5}>
+      <Typography variant="h4" align="center">Paper is mostly used when designing input forms</Typography>
+      {/* <MuiCard /> */}
       <Grid>
-        <Paper elevation={5} style={paperStyle}>
+        <Paper elevation={3} style={paperStyle}>
           <Grid align="center">
             <Avatar style={avatarStyle}>
               <LockOutlinedIcon />
@@ -172,6 +178,20 @@ export default function Login() {
           </Box>
         </Grid>
       </Grid>
-    </>
+      
+      <Typography variant='h4' align="center">Cards contain content and actions about a single subject.</Typography>
+      <Box fullWidth my={5}>
+        <Card align='center'>
+          <CardContent>
+            <Typography variant="h5" color="text.primary" component='div' gutterBottom>Word of the day</Typography>
+            <Typography variant="body2" color='text.secondary'> Confused</Typography>
+          </CardContent>
+          <CardActions sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px'}}>
+            <Button size='small'> Share</Button>
+            <Button size='small'> Learn More</Button>
+          </CardActions>
+        </Card>
+      </Box>
+    </Paper>
   );
 }

@@ -11,13 +11,14 @@ import {
   Divider,
   Card,
   CardContent,
-  CardActions
+  CardActions,
+  CardMedia,
 } from "@mui/material";
 import React from "react";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
-// import { MuiCard } from './components/MuiCard';
+// import { MuiAccordion } from './MuiAccordion';
 
 export default function Login() {
   const paperStyle = {
@@ -29,9 +30,9 @@ export default function Login() {
   const avatarStyle = { backgroundColor: "#1bbd7e" };
   const buttonStyle = { backgroundColor: "#1bbd7e", margin: "8px 0" };
   return (
+    <>
     <Paper sx={{ padding: '100px'}} elevation={5}>
       <Typography variant="h4" align="center">Paper is mostly used when designing input forms</Typography>
-      {/* <MuiCard /> */}
       <Grid>
         <Paper elevation={3} style={paperStyle}>
           <Grid align="center">
@@ -180,18 +181,34 @@ export default function Login() {
       </Grid>
       
       <Typography variant='h4' align="center">Cards contain content and actions about a single subject.</Typography>
-      <Box fullWidth my={5}>
-        <Card align='center'>
-          <CardContent>
-            <Typography variant="h5" color="text.primary" component='div' gutterBottom>Word of the day</Typography>
-            <Typography variant="body2" color='text.secondary'> Confused</Typography>
-          </CardContent>
-          <CardActions sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px'}}>
-            <Button size='small'> Share</Button>
-            <Button size='small'> Learn More</Button>
-          </CardActions>
-        </Card>
-      </Box>
+      <Grid
+      display='flex'
+      justifyContent='center'
+      alignItems='center'
+      >
+        <Box width='300px' my={5} display='flex' justifyContent='center' alignItems='center'>
+          <Card align='center'>
+            <CardMedia 
+            component='img' 
+            height='140' 
+            image='https://source.unsplash.com/random'
+            alt="unsplash"
+            />
+            <CardContent>
+              <Typography variant="h5" color="text.primary" component='div' gutterBottom>Random Photo</Typography>
+              <Typography variant="body2" color='text.secondary'>There are a lot of wonderful pictures on unsplash.com. You can check them out.</Typography>
+            </CardContent>
+            <CardActions sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '20px'}}>
+              <Button size='small'> Share</Button>
+              <Button size='small'> Learn More</Button>
+            </CardActions>
+          </Card>
+        </Box>
+      </Grid>
+
+      <Typography variant='h4' align="center">Accordions contain creation flows and allow lightweight editing of an element.</Typography>
     </Paper>
+    {/* <MuiAccordion /> */}
+    </>
   );
 }

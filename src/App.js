@@ -1,6 +1,7 @@
 import './App.css';
 // import Login from './components/login';
-import { MuiAccordion } from './MuiAccordion';
+import { MuiImageList } from './MuiImageList';
+// import { MuiAccordion } from './MuiAccordion';
 
 
 
@@ -8,7 +9,8 @@ function App() {
   return (
     <div className="App">
       {/* <Login /> */}
-      <MuiAccordion />
+      {/* <MuiAccordion /> */}
+      <MuiImageList />
     </div>
   );
 }

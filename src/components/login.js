@@ -87,10 +87,11 @@ export default function Login() {
       </Typography>
       <Stack
         sx={{ border: "2px solid blue" }}
-        direction="row"
-        spacing={6.5}
+        // direction="column"
+        display='flex'
+        flexDirection='column'
+        spacing={.5}
         divider={<Divider orientation="vertical" flexItem />}
-        
       >
         <Box
           sx={{
@@ -158,22 +159,22 @@ export default function Login() {
         GRID is use for creating two dimensional layout like a CSS flexbox
       </Typography>
       <Grid container my={8} spacing={3}>
-        <Grid item xs={12} sm={9} md={9} >
+        <Grid item xs={12} sm={12} md={9} >
           <Box bgcolor="primary.light" p={2} textAlign='center'>
             Item A
           </Box>
         </Grid>
-        <Grid item xs={12} sm={9} md={3}>
+        <Grid item xs={12} sm={12} md={3}>
           <Box bgcolor="secondary.light" p={2} textAlign='center'>
             Item B
           </Box>
         </Grid>
-        <Grid item xs={12} sm={9} md={3}> 
+        <Grid item xs={12} sm={12} md={3}> 
           <Box bgcolor="warning.light" p={2} textAlign='center'>
             Item C
           </Box>
         </Grid>
-        <Grid item xs={12} sm={9} md={9}>
+        <Grid item xs={12} sm={12} md={9}>
           <Box bgcolor="error.light" p={2} textAlign='center'>
             Item D
           </Box>

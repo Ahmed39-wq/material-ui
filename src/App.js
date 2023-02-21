@@ -1,8 +1,8 @@
 import './App.css';
 // import Login from './components/login';
-import { MuiImageList } from './MuiImageList';
+// import { MuiImageList } from './MuiImageList';
 // import { MuiAccordion } from './MuiAccordion';
-
+import { MuiNavbar } from './MuiNavbar';
 
 
 function App() {
@@ -10,7 +10,8 @@ function App() {
     <div className="App">
       {/* <Login /> */}
       {/* <MuiAccordion /> */}
-      <MuiImageList />
+      {/* <MuiImageList /> */}
+      <MuiNavbar />
     </div>
   );
 }

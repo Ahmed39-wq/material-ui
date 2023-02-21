@@ -3,15 +3,16 @@ import { Stack, ImageList, ImageListItem } from '@mui/material'
 
 export const MuiImageList = () => {
   return (
-    <Stack spacing={4 }>
+    <Stack spacing={4}>
       <ImageList 
         sx={{width: 400, height: 500}}
         cols={2}
-        rowWeight={164}
+        // rowWeight={164}
+        gap={10}
         >
           {itemData.map((item) => (
             <ImageListItem key={item.img}>
-              <img src={`${item.img}`} alt={`${item.title}`} loading='lazy'/>
+              <img src={`${item.img}`} loading='lazy'/>
             </ImageListItem>
           ))}
           
